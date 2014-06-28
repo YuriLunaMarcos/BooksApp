@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sale_id: 1
+  cantidad: 1
+  precio: 9.99
+  descuento: MyString
+  total: 9.99
+
+two:
+  sale_id: 1
+  cantidad: 1
+  precio: 9.99
+  descuento: MyString
+  total: 9.99

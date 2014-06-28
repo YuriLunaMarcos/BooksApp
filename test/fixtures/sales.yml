@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  costumer_id: 1
+  fecha_venta: 2014-06-27
+  book_id: MyString
+
+two:
+  costumer_id: 1
+  fecha_venta: 2014-06-27
+  book_id: MyString
