@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Fecha: 2014-06-30
+  Cliente: 1
+  Medio: MyString
+  Descripcion: MyText
+  Empleado: MyString
+
+two:
+  Fecha: 2014-06-30
+  Cliente: 1
+  Medio: MyString
+  Descripcion: MyText
+  Empleado: MyString

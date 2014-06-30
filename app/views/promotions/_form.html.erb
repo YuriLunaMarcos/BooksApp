@@ -1,0 +1,37 @@
+<%= form_for(@promotion) do |f| %>
+  <% if @promotion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@promotion.errors.count, "error") %> prohibited this promotion from being saved:</h2>
+
+      <ul>
+      <% @promotion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Fecha %><br>
+    <%= f.date_select :Fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :Cliente %><br>
+    <%= f.number_field :Cliente %>
+  </div>
+  <div class="field">
+    <%= f.label :Medio %><br>
+    <%= select_tag(:Medio, options_for_select([['Telefono','1'],['Correo Electronico','2']],'1'))%>
+  </div>
+  <div class="field">
+    <%= f.label :Descripcion %><br>
+    <%= f.text_area :Descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :Empleado %><br>
+    <%= f.text_field :Empleado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
