@@ -3,8 +3,17 @@ class CostumersController < ApplicationController
 
   # GET /costumers
   # GET /costumers.json
-  def index
-    @costumers = Costumer.all
+  def index 
+    if params[:search] 
+      @costumers = Costumer.where("nombre LIKE '%"+params[:search]+"%'")
+      
+    if @costumers.size.zero? 
+      #flash[:resultado] = "No result found" 
+      @costumers = Costumer.all
+    end 
+    else 
+      @costumers = Costumer.all      
+    end 
   end
 
   # GET /costumers/1
