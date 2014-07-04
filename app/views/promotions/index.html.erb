@@ -1,13 +1,18 @@
 <h1>Listado de Promociones</h1>
+<form class="form-search">
+    <div class="input-append">
+        <input type="text" id="search" name="search" class="span2 search-query" placeholder="Buscar...">
+        <button type="submit" class="btn btn-success">Buscar</button>
+    </div>
+  </form> 
 
-
-<table border="2px">
+<table >
   <thead>
     <tr>
       <th>Fecha</th>
       <th>Cliente</th>
       <th>Medio</th>
-      <th>Descripcion</th>
+      <th>Descripción</th>
       <th>Empleado</th>
       <th colspan="3"></th>
     </tr>
@@ -17,13 +22,13 @@
     <% @promotions.each do |promotion| %>
       <tr>
         <td><%= promotion.Fecha %></td>
-        <td><%= promotion.Cliente %></td>
+        <td><%= promotion.Cliente %> </td>
         <td><%= promotion.Medio %></td>
         <td><%= promotion.Descripcion %></td>
         <td><%= promotion.Empleado %></td>
-        <td><%= link_to 'Show', promotion %></td>
-        <td><%= link_to 'Edit', edit_promotion_path(promotion) %></td>
-        <td><%= link_to 'Destroy', promotion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Detalles', promotion %></td>
+        <td><%= link_to 'Editar', edit_promotion_path(promotion) %></td>
+        <td><%= link_to 'Eliminar', promotion, method: :delete, data: { confirm: '¿Está seguro que desea eliminar el registro?' } %></td>
       </tr>
     <% end %>
   </tbody>
