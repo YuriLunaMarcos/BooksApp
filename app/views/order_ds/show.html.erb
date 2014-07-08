@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @order_d.order_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @order_d.product_id %>
+</p>
+
+<p>
+  <strong>Acuerdo:</strong>
+  <%= @order_d.acuerdo %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @order_d.estado %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @order_d.cantidad %>
+</p>
+
+<p>
+  <strong>Desceuento:</strong>
+  <%= @order_d.desceuento %>
+</p>
+
+<p>
+  <strong>Preciounitario:</strong>
+  <%= @order_d.precioUnitario %>
+</p>
+
+<p>
+  <strong>Importetotal:</strong>
+  <%= @order_d.importeTotal %>
+</p>
+
+<%= link_to 'Edit', edit_order_d_path(@order_d) %> |
+<%= link_to 'Back', order_ds_path %>

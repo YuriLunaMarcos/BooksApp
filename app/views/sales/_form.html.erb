@@ -1,0 +1,80 @@
+<%= form_for(@sale) do |f| %>
+  <% if @sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+
+<ul>
+      <% @sale.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div id="datosCostumer">
+  <fieldset>
+  <legend>Datos del costumer</legend>
+  
+     <%= fields_for @costumer do |c| %>
+       <%= c.hidden_field :id %>
+       <%= c.text_field :rfc, :id =>"clavecliente", :placeholder => "RFC del cliente" %>
+      <div id="cliente">
+        <%= c.text_field :nombre, :id =>"nombrecliente", :placeholder => "Nombre del cliente" %>
+        <%= c.text_field :diraccion, :id =>"direccioncliente", :placeholder => "Direccion del cliente" %>
+
+    <% end %>
+  </fieldset>
+</div>
+  
+
+<div id="detallesVentaContainer">
+    <di id="agregarBookContainer">
+      <span>
+        ISBN del book: <input type="text" name="clavelibro" id="clavelibro" placeholder="Clave del libro"/>        
+      </span>
+      <span>
+        Cantidad de ejemplares: <input type="number" name="cantidadlibro" id="cantidadlibro" placeholder="Cantidad" value="1">
+      </span>
+      <p>% de descuento por libro
+        <input type="number" name="descuentolibro" id="descuentolibro" value="0" onkeypress="validaNumeros()" min="0" max="20" maxlength="2" >
+      </p>      
+    </div>
+    <%# Crear la tabla donde agregaremos los productos %>
+
+     <table id="detallesVentaTable" cellspacing="0">
+    <thead>
+      <th>Clave</th>
+      <th>Descripción</th>
+      <th>P. Unidad</th>
+      <th>Cantidad</th>
+      <th>Importe</th>
+  </thead>
+    <tbody>
+      <% @sale.detailSales.each do |item| %>
+        <%= f.fields_for :detailSales, item do |d| %>
+          <tr>
+            <td><%= d.text_field :book_id, :class =>"idLibroVender" %></td>
+            <td><input type="text" value="<%= item.book.nombre %>"></td>
+            <td><%= d.text_field :preciounitario %></td>
+            <td><%= d.text_field :cantidad, :class =>"cantidadVender" %></td>
+            <td><%= d.text_field :importe, :class =>"importeBook" %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+    <tfoot>
+      <th colspan="2">Total de artículos:</th>
+      <th id="totalArts">0</th>
+      <th>Importe total:</th>
+      <th id="importeTotalVenta">0</th>
+    </tfoot>
+  </table>
+</div>
+
+<div class="form-actions">
+    <%#= f.submit nil, :class => 'btn btn-primary' %>
+    <button name="guardarVenta" id="guardarVenta" type="button" class="btn btn-primary">Registrar venta</button>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), sales_path, :class => 'btn' %>
+  </div>
+
+<% end %>
