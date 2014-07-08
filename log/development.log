@@ -25671,3 +25671,3648 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-04 10:03:12
 
 
 Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-04 10:03:12 -0500
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-07-04 12:00:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IKJpbScY4cubba7wF8pm1dYq2f0N+pJZBNNy7Y0iXUQ=", "user"=>{"email"=>"g@uti.edu.mx", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (3.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'g@uti.edu.mx'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["current_sign_in_at", "2014-07-04 17:00:20.556337"], ["last_sign_in_at", "2014-07-04 14:52:37.726020"], ["sign_in_count", 9], ["updated_at", "2014-07-04 17:00:20.561341"]]
+  [1m[36m (151.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1180ms (ActiveRecord: 164.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-04 12:00:21 -0500
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (15.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mOrder Load (3.0ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (232.0ms)
+Completed 200 OK in 2219ms (Views: 2001.2ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:23 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:24 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:24 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:24 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:24 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:24 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:25 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:25 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:26 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:26 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:26 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:26 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:26 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:27 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:27 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-04 12:00:27 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-04 12:00:28 -0500
+
+
+Started GET "/promotions" for 127.0.0.1 at 2014-07-04 12:00:58 -0500
+Processing by PromotionsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPromotion Load (0.0ms)[0m  [1mSELECT "promotions".* FROM "promotions"[0m
+  Rendered promotions/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 281ms (Views: 249.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:59 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:59 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:59 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:59 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-04 12:00:59 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:00 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:00 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:00 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:01 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:01 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:01 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:01 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:01 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:01 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:01 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-04 12:01:02 -0500
+
+
+Started DELETE "/promotions/3" for 127.0.0.1 at 2014-07-04 12:01:23 -0500
+Processing by PromotionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xu+b8Pm5V7hiQaMikCChT3f+wrCvNGHFyQPOD6pL04Y=", "id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPromotion Load (0.0ms)[0m  [1mSELECT  "promotions".* FROM "promotions"  WHERE "promotions"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "promotions" WHERE "promotions"."id" = ?[0m  [["id", 3]]
+  [1m[35m (109.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/promotions
+Completed 302 Found in 125ms (ActiveRecord: 109.4ms)
+
+
+Started GET "/promotions" for 127.0.0.1 at 2014-07-04 12:01:23 -0500
+Processing by PromotionsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPromotion Load (0.0ms)[0m  SELECT "promotions".* FROM "promotions"
+  Rendered promotions/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 203ms (Views: 187.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:23 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:23 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:24 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:24 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:24 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:24 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:24 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-04 12:01:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:25 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:25 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:25 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:25 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:26 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:26 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:26 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-04 12:01:26 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-04 12:01:26 -0500
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-04 12:04:17 -0500
+Processing by PromotionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered promotions/_form.html.erb (312.0ms)
+  Rendered promotions/new.html.erb within layouts/application (374.4ms)
+Completed 200 OK in 562ms (Views: 546.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-04 12:53:25 -0500
+Processing by CostumersController#index as HTML
+  [1m[35mUser Load (3.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (2.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  Rendered costumers/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 293ms (Views: 242.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-07-04 12:53:27 -0500
+Processing by BooksController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mBook Load (0.0ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 281ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-04 12:53:30 -0500
+Processing by CostumersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  Rendered costumers/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 172ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2014-07-04 12:53:31 -0500
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 218ms (Views: 218.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/promotions" for 127.0.0.1 at 2014-07-04 12:53:38 -0500
+Processing by PromotionsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPromotion Load (0.0ms)[0m  [1mSELECT "promotions".* FROM "promotions"[0m
+  Rendered promotions/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 172ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:39 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:39 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:39 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:39 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:39 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:39 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:39 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:40 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:41 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:41 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-04 12:53:41 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-04 12:53:41 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-07 20:05:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+Completed 401 Unauthorized in 328ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-07-07 20:05:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (858.0ms)
+Completed 200 OK in 2964ms (Views: 2886.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:10 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:10 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:10 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:10 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:10 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:10 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:10 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:11 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:11 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:12 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:12 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:12 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:12 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:12 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:12 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-07 20:05:13 -0500
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-07-07 20:05:33 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4aKQq2AWLMOPK04bL94BE4eWuBauWMPYWW6NT9p4vuc=", "user"=>{"email"=>"g@uti.edu.mx", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'g@uti.edu.mx'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["current_sign_in_at", "2014-07-08 01:05:33.478578"], ["last_sign_in_at", "2014-07-04 17:00:20.556337"], ["sign_in_count", 10], ["updated_at", "2014-07-08 01:05:33.478578"]]
+  [1m[36m (156.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 749ms (ActiveRecord: 156.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-07 20:05:33 -0500
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 562ms (Views: 280.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:34 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:36 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:37 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:37 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:37 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:37 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:37 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:37 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:38 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-07 20:05:38 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-07 20:05:54 -0500
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (15.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 359ms (Views: 343.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:55 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:55 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:55 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:55 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:55 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:55 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:56 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-07 20:05:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:56 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:56 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:57 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:57 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:57 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:57 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:57 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-07 20:05:57 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-07 20:05:57 -0500
+
+
+Started GET "/customers" for 127.0.0.1 at 2014-07-07 20:06:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/customers"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (46.7ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (936.0ms)
+
+
+Started GET "/costomers" for 127.0.0.1 at 2014-07-07 20:06:11 -0500
+
+ActionController::RoutingError (No route matches [GET] "/costomers"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (858.0ms)
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-07 20:06:19 -0500
+Processing by CostumersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  Rendered costumers/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 359ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:20 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-07 20:06:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:21 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:21 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:21 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:21 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:22 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:22 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:22 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-07 20:06:22 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-07 20:06:22 -0500
+
+
+Started GET "/employee" for 127.0.0.1 at 2014-07-08 03:45:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (15.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (655.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-07-08 03:45:47 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (624.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-07-08 03:45:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (405.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-08 03:46:00 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (639.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-08 03:46:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (499.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-08 03:46:07 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (15.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (561.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEmployees (20140708083846)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140708083846"]]
+  [1m[36m (187.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (15.6ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-08 03:47:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+Completed 401 Unauthorized in 234ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-07-08 03:47:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (717.6ms)
+Completed 200 OK in 4087ms (Views: 3946.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:50 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:50 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:50 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:50 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:50 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:50 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:50 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 03:47:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:51 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:52 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:52 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:52 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:52 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:52 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:52 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 03:47:53 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 03:47:53 -0500
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-07-08 03:48:06 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9tRBEEOX72bJFc8QrFY0KFW/+F0Slk9hlkP8Z0VNnsE=", "user"=>{"email"=>"g@uti.edu.mx", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'g@uti.edu.mx'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["current_sign_in_at", "2014-07-08 08:48:06.581198"], ["last_sign_in_at", "2014-07-08 01:05:33.478578"], ["sign_in_count", 11], ["updated_at", "2014-07-08 08:48:06.581198"]]
+  [1m[36m (202.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 686ms (ActiveRecord: 202.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-08 03:48:07 -0500
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (171.6ms)
+Completed 200 OK in 733ms (Views: 499.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:08 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:08 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:08 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:08 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:08 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:08 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:08 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:09 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:10 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:10 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:10 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:10 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:10 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:10 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:11 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 03:48:11 -0500
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-07-08 03:48:30 -0500
+Processing by EmployeesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 187ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:32 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:32 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:32 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:32 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:33 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:33 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:33 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:33 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 03:48:33 -0500
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-07-08 03:48:40 -0500
+Processing by EmployeesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered employees/_form.html.erb (15.6ms)
+  Rendered employees/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 234ms (Views: 218.4ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-07-08 03:48:54 -0500
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "employee"=>{"nombre"=>"Ana"}, "commit"=>"Create Employee"}
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "employees" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-07-08 08:48:54.895386"], ["nombre", "Ana"], ["updated_at", "2014-07-08 08:48:54.895386"]]
+  [1m[35m (93.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 140ms (ActiveRecord: 109.2ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2014-07-08 03:48:55 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered employees/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 234ms (Views: 202.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:55 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:55 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:55 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:55 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:55 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:56 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:56 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:48:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:56 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:56 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:57 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:57 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:57 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:57 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:57 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:48:57 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 03:48:57 -0500
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-07-08 03:49:02 -0500
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 218ms (Views: 202.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-07-08 03:49:04 -0500
+Processing by EmployeesController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered employees/_form.html.erb (0.0ms)
+  Rendered employees/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 187ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-07-08 03:49:10 -0500
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "employee"=>{"nombre"=>"Carlos"}, "commit"=>"Create Employee"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "employees" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-07-08 08:49:10.838926"], ["nombre", "Carlos"], ["updated_at", "2014-07-08 08:49:10.838926"]]
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 156ms (ActiveRecord: 124.8ms)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2014-07-08 03:49:11 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered employees/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 218ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:11 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:11 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:11 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:11 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:11 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:12 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:13 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:13 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:13 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:13 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:13 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 03:49:14 -0500
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-07-08 03:49:15 -0500
+Processing by EmployeesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 172ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-07-08 03:49:17 -0500
+Processing by EmployeesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered employees/_form.html.erb (15.6ms)
+  Rendered employees/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 187ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-07-08 03:49:28 -0500
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "employee"=>{"nombre"=>"Matias"}, "commit"=>"Create Employee"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (15.6ms)[0m  [1mINSERT INTO "employees" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-07-08 08:49:28.404856"], ["nombre", "Matias"], ["updated_at", "2014-07-08 08:49:28.404856"]]
+  [1m[35m (93.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/3
+Completed 302 Found in 140ms (ActiveRecord: 109.3ms)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2014-07-08 03:49:28 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered employees/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 312ms (Views: 296.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:29 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:29 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:29 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:29 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:29 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:29 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:29 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:30 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:31 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:31 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:31 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 03:49:31 -0500
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-08 03:49:42 -0500
+Processing by CostumersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCostumer Load (0.0ms)[0m  SELECT "costumers".* FROM "costumers"
+  Rendered costumers/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 250ms (Views: 202.9ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:43 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:43 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:43 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:43 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:43 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:43 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:44 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:44 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:44 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 03:49:44 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:44 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:44 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:45 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:45 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:45 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:45 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:45 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:45 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 03:49:45 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 03:49:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePromotions (20140708085324)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "promotions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "costumer_id" integer, "employee_id" integer, "fecha" date, "descripcion" text, "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "promotions" already exists: CREATE TABLE "promotions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "costumer_id" integer, "employee_id" integer, "fecha" date, "descripcion" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (124.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (109.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOrders (20140615190804)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (31.2ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "usuario_id" integer, "cliente_id" integer, "fechaPedido" datetime, "fechaEntrega" datetime, "fechaRealEntrega" datetime, "estado" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140615190804"]]
+  [1m[35m (156.0ms)[0m  commit transaction
+Migrating to CreateCostumers (20140615192431)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (15.6ms)[0m  CREATE TABLE "costumers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rfc" varchar(255), "nombre" varchar(255), "telefono" varchar(255), "facebook" varchar(255), "diraccion" varchar(255), "linkedin" varchar(255), "correoE" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140615192431"]]
+  [1m[35m (140.4ms)[0m  commit transaction
+Migrating to CreateOrderDs (20140615194803)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (15.6ms)[0m  CREATE TABLE "order_ds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer, "product_id" integer, "acuerdo" text, "estado" varchar(255), "cantidad" integer, "desceuento" float, "precioUnitario" float, "importeTotal" float, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140615194803"]]
+  [1m[35m (187.2ms)[0m  commit transaction
+Migrating to CreateBooks (20140615195845)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "isbn" varchar(255), "nombre" varchar(255), "cantidad" integer, "precio" float, "categoria_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140615195845"]]
+  [1m[35m (187.4ms)[0m  commit transaction
+Migrating to DeviseCreateUsers (20140625161201)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (15.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140625161201"]]
+  [1m[36m (234.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSales (20140627162930)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "sales" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "costumer_id" integer, "fecha_venta" date, "book_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140627162930"]]
+  [1m[36m (187.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateDetailSales (20140627163116)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "detail_sales" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sale_id" integer, "cantidad" integer, "precio" decimal, "descuento" varchar(255), "total" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140627163116"]]
+  [1m[36m (218.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEmployees (20140708083846)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140708083846"]]
+  [1m[36m (140.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePromotions (20140708085324)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (15.6ms)[0m  [1mCREATE TABLE "promotions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "costumer_id" integer, "employee_id" integer, "fecha" date, "descripcion" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140708085324"]]
+  [1m[36m (156.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-08 04:05:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (15.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 343ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-07-08 04:05:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (733.3ms)
+Completed 200 OK in 2215ms (Views: 2152.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:20 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:20 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:20 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:20 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:20 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:20 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:21 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:21 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:21 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:21 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:22 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:22 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:22 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:22 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:22 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:22 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:22 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:05:23 -0500
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-07-08 04:05:34 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "user"=>{"email"=>"g@uti.edu.mx", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'g@uti.edu.mx'  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 47ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "user"=>{"email"=>"g@uti.edu.mx", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 468ms (Views: 280.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:34 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:36 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:36 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:36 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:36 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:36 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:37 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:37 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:37 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:37 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:05:37 -0500
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-07-08 04:05:52 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 359ms (Views: 358.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:05:54 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-08 04:06:19 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "user"=>{"email"=>"nefy@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nefy@com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 827ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:20 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:20 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:20 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:20 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:20 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:20 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:20 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:21 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:21 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:21 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:21 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:22 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:22 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:22 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:22 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:22 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:22 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:06:22 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-08 04:06:47 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "user"=>{"email"=>"nefy@com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nefy@com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 593ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:48 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:48 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:48 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:48 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:48 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:48 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:49 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:50 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:50 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:50 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:06:50 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:06:50 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-08 04:07:08 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "user"=>{"email"=>"nefy@com.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (15.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nefy@com.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (31.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-07-08 09:07:08.840280"], ["email", "nefy@com.com"], ["encrypted_password", "$2a$10$DeiCedi4lNEclvr1hq8cMuw6e4m7X2sJUP.XTWzr40Y/mUZfiMPEe"], ["updated_at", "2014-07-08 09:07:08.840280"]]
+  [1m[36m (187.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (15.6ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2014-07-08 09:07:09.199086"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-07-08 09:07:09.199086"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-07-08 09:07:09.199086"]]
+  [1m[35m (202.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 811ms (ActiveRecord: 452.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-08 04:07:09 -0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 390ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:11 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:12 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:12 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:12 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:07:12 -0500
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-08 04:07:22 -0500
+Processing by CostumersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCostumer Load (0.0ms)[0m  SELECT "costumers".* FROM "costumers"
+  Rendered costumers/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 203ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-08 04:07:35 -0500
+Processing by CostumersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCostumer Load (0.0ms)[0m  SELECT "costumers".* FROM "costumers"
+  Rendered costumers/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 250ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:35 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:35 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:35 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:35 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:36 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:36 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:36 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:36 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:37 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:07:38 -0500
+
+
+Started GET "/costumers/new" for 127.0.0.1 at 2014-07-08 04:07:39 -0500
+Processing by CostumersController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered costumers/_form.html.erb (31.3ms)
+  Rendered costumers/new.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 328ms (Views: 296.4ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/costumers" for 127.0.0.1 at 2014-07-08 04:07:57 -0500
+Processing by CostumersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "costumer"=>{"rfc"=>"123", "nombre"=>"Juan", "telefono"=>"5555", "facebook"=>"", "diraccion"=>"", "linkedin"=>"", "correoE"=>""}, "commit"=>"Create Costumer"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "costumers" ("correoE", "created_at", "diraccion", "facebook", "linkedin", "nombre", "rfc", "telefono", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["correoE", ""], ["created_at", "2014-07-08 09:07:57.329681"], ["diraccion", ""], ["facebook", ""], ["linkedin", ""], ["nombre", "Juan"], ["rfc", "123"], ["telefono", "5555"], ["updated_at", "2014-07-08 09:07:57.329681"]]
+  [1m[36m (171.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/costumers/1
+Completed 302 Found in 234ms (ActiveRecord: 171.6ms)
+
+
+Started GET "/costumers/1" for 127.0.0.1 at 2014-07-08 04:07:57 -0500
+Processing by CostumersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT  "costumers".* FROM "costumers"  WHERE "costumers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered costumers/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 203ms (Views: 202.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:07:59 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:08:00 -0500
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-08 04:08:04 -0500
+Processing by CostumersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  Rendered costumers/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 234ms (Views: 202.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/costumers/new" for 127.0.0.1 at 2014-07-08 04:08:06 -0500
+Processing by CostumersController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered costumers/_form.html.erb (15.6ms)
+  Rendered costumers/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 250ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/costumers" for 127.0.0.1 at 2014-07-08 04:08:17 -0500
+Processing by CostumersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "costumer"=>{"rfc"=>"234", "nombre"=>"Paula", "telefono"=>"333", "facebook"=>"", "diraccion"=>"", "linkedin"=>"", "correoE"=>""}, "commit"=>"Create Costumer"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "costumers" ("correoE", "created_at", "diraccion", "facebook", "linkedin", "nombre", "rfc", "telefono", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["correoE", ""], ["created_at", "2014-07-08 09:08:17.142056"], ["diraccion", ""], ["facebook", ""], ["linkedin", ""], ["nombre", "Paula"], ["rfc", "234"], ["telefono", "333"], ["updated_at", "2014-07-08 09:08:17.142056"]]
+  [1m[35m (171.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/costumers/2
+Completed 302 Found in 187ms (ActiveRecord: 171.6ms)
+
+
+Started GET "/costumers/2" for 127.0.0.1 at 2014-07-08 04:08:17 -0500
+Processing by CostumersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCostumer Load (0.0ms)[0m  SELECT  "costumers".* FROM "costumers"  WHERE "costumers"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered costumers/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 187ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:17 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:17 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:18 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:18 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:18 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:18 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:18 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:18 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:19 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:19 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:19 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:19 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:20 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:20 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:20 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:20 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:20 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:08:20 -0500
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-08 04:08:23 -0500
+Processing by CostumersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCostumer Load (0.0ms)[0m  SELECT "costumers".* FROM "costumers"
+  Rendered costumers/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 187ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/costumers/new" for 127.0.0.1 at 2014-07-08 04:08:26 -0500
+Processing by CostumersController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered costumers/_form.html.erb (15.6ms)
+  Rendered costumers/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 250ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/costumers" for 127.0.0.1 at 2014-07-08 04:08:49 -0500
+Processing by CostumersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "costumer"=>{"rfc"=>"678", "nombre"=>"Catalina", "telefono"=>"222", "facebook"=>"", "diraccion"=>"", "linkedin"=>"", "correoE"=>""}, "commit"=>"Create Costumer"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "costumers" ("correoE", "created_at", "diraccion", "facebook", "linkedin", "nombre", "rfc", "telefono", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["correoE", ""], ["created_at", "2014-07-08 09:08:49.684361"], ["diraccion", ""], ["facebook", ""], ["linkedin", ""], ["nombre", "Catalina"], ["rfc", "678"], ["telefono", "222"], ["updated_at", "2014-07-08 09:08:49.684361"]]
+  [1m[36m (156.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/costumers/3
+Completed 302 Found in 172ms (ActiveRecord: 156.0ms)
+
+
+Started GET "/costumers/3" for 127.0.0.1 at 2014-07-08 04:08:49 -0500
+Processing by CostumersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT  "costumers".* FROM "costumers"  WHERE "costumers"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered costumers/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 343ms (Views: 312.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:50 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:50 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:50 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:50 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:51 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:52 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:52 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:52 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:52 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:52 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:52 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:08:52 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:08:53 -0500
+
+
+Started GET "/costumers" for 127.0.0.1 at 2014-07-08 04:08:57 -0500
+Processing by CostumersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  Rendered costumers/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 172ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-07-08 04:09:08 -0500
+Processing by EmployeesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 203ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:08 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:08 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:09 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:09 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:09 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:09 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:09 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:09 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:10 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:10 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:09:11 -0500
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-07-08 04:09:14 -0500
+Processing by EmployeesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered employees/_form.html.erb (15.6ms)
+  Rendered employees/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 203ms (Views: 187.3ms | ActiveRecord: 15.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-07-08 04:09:29 -0500
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "employee"=>{"nombre"=>"Leonardo"}, "commit"=>"Create Employee"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "employees" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-07-08 09:09:29.995477"], ["nombre", "Leonardo"], ["updated_at", "2014-07-08 09:09:29.995477"]]
+  [1m[35m (171.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 234ms (ActiveRecord: 171.6ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2014-07-08 04:09:31 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered employees/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 187ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:31 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:31 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:32 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:32 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:32 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:32 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:32 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:33 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:33 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:33 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:33 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:33 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:34 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:34 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:34 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:34 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:34 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:09:34 -0500
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-07-08 04:09:36 -0500
+Processing by EmployeesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mEmployee Load (15.6ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 203ms (Views: 187.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2014-07-08 04:09:38 -0500
+Processing by EmployeesController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered employees/_form.html.erb (0.0ms)
+  Rendered employees/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 218ms (Views: 202.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2014-07-08 04:09:56 -0500
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "employee"=>{"nombre"=>"Sofía"}, "commit"=>"Create Employee"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "employees" ("created_at", "nombre", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-07-08 09:09:56.141597"], ["nombre", "Sofía"], ["updated_at", "2014-07-08 09:09:56.141597"]]
+  [1m[36m (93.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 125ms (ActiveRecord: 109.4ms)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2014-07-08 04:09:56 -0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered employees/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 156ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:56 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:56 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:56 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:56 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:57 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:09:58 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:09:59 -0500
+
+
+Started GET "/employees" for 127.0.0.1 at 2014-07-08 04:10:01 -0500
+Processing by EmployeesController#index as HTML
+  [1m[35mUser Load (15.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mEmployee Load (15.6ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 203ms (Views: 171.6ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/promotions" for 127.0.0.1 at 2014-07-08 04:18:09 -0500
+Processing by PromotionsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPromotion Load (0.0ms)[0m  [1mSELECT "promotions".* FROM "promotions"[0m
+  Rendered promotions/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 250ms (Views: 171.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:10 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:10 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:10 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:10 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:10 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:10 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:10 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:10 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:11 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:18:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:11 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:11 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:11 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:12 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:12 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:12 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:12 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:12 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:18:12 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:18:12 -0500
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-08 04:18:19 -0500
+Processing by PromotionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  Rendered promotions/_form.html.erb (312.0ms)
+  Rendered promotions/new.html.erb within layouts/application (405.6ms)
+Completed 200 OK in 640ms (Views: 608.5ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-08 04:20:34 -0500
+Processing by PromotionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered promotions/_form.html.erb (140.4ms)
+  Rendered promotions/new.html.erb within layouts/application (171.6ms)
+Completed 200 OK in 343ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:34 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:34 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:34 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:34 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:34 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:35 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:36 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:36 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:36 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:36 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:20:36 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:20:37 -0500
+
+
+Started POST "/promotions" for 127.0.0.1 at 2014-07-08 04:21:11 -0500
+Processing by PromotionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kYssQ+Vw7DtunYlxUhxE6ocmlM9mdzzW+IHpEzl28hU=", "promotion"=>{"costumer_id"=>"2", "employee_id"=>"2", "fecha(1i)"=>"2014", "fecha(2i)"=>"7", "fecha(3i)"=>"8", "descripcion"=>"se envia la promocion de los diccionarios."}, "commit"=>"Create Promotion"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "promotions" ("costumer_id", "created_at", "descripcion", "employee_id", "fecha", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["costumer_id", 2], ["created_at", "2014-07-08 09:21:11.494753"], ["descripcion", "se envia la promocion de los diccionarios."], ["employee_id", 2], ["fecha", "2014-07-08"], ["updated_at", "2014-07-08 09:21:11.494753"]]
+  [1m[35m (156.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/promotions/1
+Completed 302 Found in 172ms (ActiveRecord: 156.0ms)
+
+
+Started GET "/promotions/1" for 127.0.0.1 at 2014-07-08 04:21:11 -0500
+Processing by PromotionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPromotion Load (0.0ms)[0m  SELECT  "promotions".* FROM "promotions"  WHERE "promotions"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered promotions/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 187ms (Views: 171.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:12 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:12 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:12 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:12 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:12 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:12 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:12 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:12 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:21:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:13 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:13 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:13 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:13 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:14 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:14 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:14 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:14 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:21:14 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:21:14 -0500
+
+
+Started GET "/promotions" for 127.0.0.1 at 2014-07-08 04:21:18 -0500
+Processing by PromotionsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPromotion Load (0.0ms)[0m  SELECT "promotions".* FROM "promotions"
+  Rendered promotions/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 187ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/promotions" for 127.0.0.1 at 2014-07-08 04:22:19 -0500
+Processing by PromotionsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPromotion Load (0.0ms)[0m  SELECT "promotions".* FROM "promotions"
+  [1m[36mCostumer Load (15.5ms)[0m  [1mSELECT  "costumers".* FROM "costumers"  WHERE "costumers"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered promotions/index.html.erb within layouts/application (234.0ms)
+Completed 200 OK in 406ms (Views: 374.5ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:20 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:20 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:20 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:20 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:20 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:21 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:21 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:21 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:22:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:21 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:22 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:22 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:22 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:22 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:22 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:22 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:22 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:22:23 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:22:23 -0500
+
+
+Started GET "/promotions" for 127.0.0.1 at 2014-07-08 04:24:53 -0500
+Processing by PromotionsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPromotion Load (0.0ms)[0m  SELECT "promotions".* FROM "promotions"
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT  "costumers".* FROM "costumers"  WHERE "costumers"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered promotions/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 203ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:54 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:54 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:54 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:54 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:54 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:54 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:54 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:55 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:55 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:24:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:24:56 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:24:57 -0500
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-08 04:25:09 -0500
+Processing by PromotionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCostumer Load (0.0ms)[0m  SELECT "costumers".* FROM "costumers"
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered promotions/_form.html.erb (31.2ms)
+  Rendered promotions/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 250ms (Views: 234.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-08 04:25:49 -0500
+Processing by PromotionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered promotions/_form.html.erb (15.6ms)
+  Rendered promotions/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 218ms (Views: 202.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:49 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:49 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:49 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:49 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:50 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:50 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:50 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:50 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:25:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:51 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:51 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:51 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:51 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:51 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:51 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:52 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:52 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:25:52 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:25:52 -0500
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-08 04:28:29 -0500
+Processing by PromotionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCostumer Load (15.6ms)[0m  SELECT "costumers".* FROM "costumers"
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered promotions/_form.html.erb (31.2ms)
+  Rendered promotions/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 265ms (Views: 234.1ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:29 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:29 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:30 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:30 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:30 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:30 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:30 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:30 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:31 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:32 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:28:32 -0500
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-08 04:28:43 -0500
+Processing by PromotionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (15.6ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered promotions/_form.html.erb (31.2ms)
+  Rendered promotions/new.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 203ms (Views: 187.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:43 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:43 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:43 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:43 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:43 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:43 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:44 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:45 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:45 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:45 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:45 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:28:45 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:28:45 -0500
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-08 04:33:07 -0500
+Processing by PromotionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCostumer Load (0.0ms)[0m  SELECT "costumers".* FROM "costumers"
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered promotions/_form.html.erb (187.2ms)
+  Rendered promotions/new.html.erb within layouts/application (202.8ms)
+Completed 200 OK in 515ms (Views: 390.0ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:08 -0500
+
+
+Started GET "/assets/detail_sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:08 -0500
+
+
+Started GET "/assets/costumers.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/order_ds.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/employees.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/promotions.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/sales.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:10 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:10 -0500
+
+
+Started GET "/assets/costumers.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:10 -0500
+
+
+Started GET "/assets/detail_sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:10 -0500
+
+
+Started GET "/assets/employees.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:10 -0500
+
+
+Started GET "/assets/order_ds.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:10 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:11 -0500
+
+
+Started GET "/assets/promotions.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:11 -0500
+
+
+Started GET "/assets/sales.js?body=1" for 127.0.0.1 at 2014-07-08 04:33:11 -0500
+
+
+Started GET "/assets/LogoSystem.png" for 127.0.0.1 at 2014-07-08 04:33:11 -0500
+
+
+Started GET "/promotions" for 127.0.0.1 at 2014-07-08 04:33:20 -0500
+Processing by PromotionsController#index as HTML
+  [1m[35mUser Load (15.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPromotion Load (0.0ms)[0m  [1mSELECT "promotions".* FROM "promotions"[0m
+  [1m[35mCostumer Load (0.0ms)[0m  SELECT  "costumers".* FROM "costumers"  WHERE "costumers"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEmployee Load (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees"  WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered promotions/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 203ms (Views: 187.2ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/promotions/new" for 127.0.0.1 at 2014-07-08 04:33:30 -0500
+Processing by PromotionsController#new as HTML
+  [1m[35mUser Load (15.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCostumer Load (0.0ms)[0m  [1mSELECT "costumers".* FROM "costumers"[0m
+  [1m[35mEmployee Load (0.0ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered promotions/_form.html.erb (15.6ms)
+  Rendered promotions/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 203ms (Views: 187.2ms | ActiveRecord: 15.6ms)

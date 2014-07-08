@@ -1,29 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Fecha:</strong>
-  <%= @promotion.Fecha %>
-</p>
-
-<p>
   <strong>Cliente:</strong>
-  <%= @promotion.Cliente %>
-</p>
-
-<p>
-  <strong>Medio:</strong>
-  <%= @promotion.Medio %>
-</p>
-
-<p>
-  <strong>Descripcion:</strong>
-  <%= @promotion.Descripcion %>
+  <%= @promotion.costumer_id %>
 </p>
 
 <p>
   <strong>Empleado:</strong>
-  <%= @promotion.Empleado %>
+  <%= @promotion.employee_id %>
 </p>
 
-<%= link_to 'Edit', edit_promotion_path(@promotion) %> |
-<%= link_to 'Back', promotions_path %>
+<p>
+  <strong>Fecha:</strong>
+  <%= @promotion.fecha %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @promotion.descripcion %>
+</p>
+
+<%= link_to 'Editar', edit_promotion_path(@promotion) %> |
+<%= link_to 'Regresar', promotions_path %>

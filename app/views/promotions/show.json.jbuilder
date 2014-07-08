@@ -1,1 +1,1 @@
-json.extract! @promotion, :id, :Fecha, :Cliente, :Medio, :Descripcion, :Empleado, :created_at, :updated_at
+json.extract! @promotion, :id, :costumer_id, :employee_id, :fecha, :descripcion, :created_at, :updated_at

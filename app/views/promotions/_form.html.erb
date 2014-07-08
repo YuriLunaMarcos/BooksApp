@@ -12,24 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Fecha %><br>
-    <%= f.date_select :Fecha %>
+    <%= f.label :costumer_id %><br>
+    <%= f.select(:costumer_id, Costumer.all.collect{|c| [c.nombre, c.id]},{})%>
   </div>
   <div class="field">
-    <%= f.label :Cliente %><br>
-    <%= f.number_field :Cliente %>
+    <%= f.label :employee_id %><br>
+    <%= f.select(:employee_id, Employee.all.collect{|c| [c.nombre, c.id]},{})%>
   </div>
   <div class="field">
-    <%= f.label :Medio %><br>
-    <%= select_tag(:Medio, options_for_select([['Telefono','1'],['Correo Electronico','2']],'1'))%>
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
   </div>
   <div class="field">
-    <%= f.label :Descripcion %><br>
-    <%= f.text_area :Descripcion %>
-  </div>
-  <div class="field">
-    <%= f.label :Empleado %><br>
-    <%= f.text_field :Empleado %>
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
   </div>
   <div class="actions">
     <%= f.submit %>

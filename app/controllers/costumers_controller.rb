@@ -24,6 +24,8 @@ class CostumersController < ApplicationController
   # GET /costumers/new
   def new
     @costumer = Costumer.new
+    @all_costumers = Costumer.all
+    @costumer_employee = @costumer.promotions.build
   end
 
   # GET /costumers/1/edit

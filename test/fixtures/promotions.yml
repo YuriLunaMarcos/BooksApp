@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Fecha: 2014-06-30
-  Cliente: 1
-  Medio: MyString
-  Descripcion: MyText
-  Empleado: MyString
+  costumer_id: 1
+  employee_id: 1
+  fecha: 2014-07-08
+  descripcion: MyText
 
 two:
-  Fecha: 2014-06-30
-  Cliente: 1
-  Medio: MyString
-  Descripcion: MyText
-  Empleado: MyString
+  costumer_id: 1
+  employee_id: 1
+  fecha: 2014-07-08
+  descripcion: MyText

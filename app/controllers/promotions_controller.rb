@@ -3,7 +3,6 @@ class PromotionsController < ApplicationController
 
   # GET /promotions
   # GET /promotions.json
- 
   def index
     @promotions = Promotion.all
   end
@@ -29,7 +28,7 @@ class PromotionsController < ApplicationController
 
     respond_to do |format|
       if @promotion.save
-        format.html { redirect_to @promotion, notice: 'Se ha registrado correctamente.' }
+        format.html { redirect_to @promotion, notice: 'Registro creado.' }
         format.json { render :show, status: :created, location: @promotion }
       else
         format.html { render :new }
@@ -43,7 +42,7 @@ class PromotionsController < ApplicationController
   def update
     respond_to do |format|
       if @promotion.update(promotion_params)
-        format.html { redirect_to @promotion, notice: 'Se ha actualizado correctamente.' }
+        format.html { redirect_to @promotion, notice: 'Registro actualizado.' }
         format.json { render :show, status: :ok, location: @promotion }
       else
         format.html { render :edit }
@@ -57,7 +56,7 @@ class PromotionsController < ApplicationController
   def destroy
     @promotion.destroy
     respond_to do |format|
-      format.html { redirect_to promotions_url, notice: 'Se ha eliminado correctamente.' }
+      format.html { redirect_to promotions_url, notice: 'Registro eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -70,6 +69,6 @@ class PromotionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def promotion_params
-      params.require(:promotion).permit(:Fecha, :Cliente, :Medio, :Descripcion, :Empleado)
+      params.require(:promotion).permit(:costumer_id, :employee_id, :fecha, :descripcion)
     end
 end
