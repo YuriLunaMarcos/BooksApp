@@ -45,7 +45,7 @@ $(document).ready(function(){
 //Busqueda de cliente http://gastonramos.com.ar/rails21/
   $('#clavecliente').on("keypress",function(event) {
     //buscar el cliente por rfc y agregarlo
-   // alert("hola");
+   alert("hola");
     if ( event.which == 13)
     {
 
@@ -161,7 +161,7 @@ function datosCostumer(rfc){
     url: "http://localhost:3000/costumers/findRFC.json?rfc=" + rfc.toLowerCase() })
     .done(function(data) {
       if(data.id == null){
-        //alert("No se encontró el cliente."); 
+        alert("No se encontró el cliente."); 
        mostrardatosCostumer();
         $("#clavecliente").focus(); 
         $("#nombrecliente").val("");
